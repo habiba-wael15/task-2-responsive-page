@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdfa"/>
+      <stop offset="50%" stop-color="#ccfbf1"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="600" rx="24" fill="url(#bgGrad)"/>
+
+  <!-- Decorative geometric accents -->
+  <circle cx="680" cy="120" r="160" fill="#99f6e4" opacity="0.4"/>
+  <circle cx="120" cy="500" r="130" fill="#bae6fd" opacity="0.4"/>
+  <circle cx="720" cy="520" r="70" fill="#fde68a" opacity="0.3"/>
+
+  <!-- Main showcase card -->
+  <g filter="url(#cardShadow)">
+    <rect x="140" y="80" width="520" height="420" rx="28" fill="#ffffff"/>
+    
+    <!-- Product backdrop -->
+    <rect x="170" y="110" width="460" height="280" rx="20" fill="#f8fafc"/>
+    
+    <!-- Stylized Studio Headphones in Hero -->
+    <!-- Headband -->
+    <path d="M 280 230 C 280 150, 520 150, 520 230" fill="none" stroke="#1e293b" stroke-width="22" stroke-linecap="round"/>
+    <path d="M 310 215 C 310 165, 490 165, 490 215" fill="none" stroke="#0d9488" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Left Cup -->
+    <rect x="250" y="210" width="48" height="95" rx="24" fill="#0f766e"/>
+    <rect x="240" y="225" width="22" height="65" rx="11" fill="#1e293b"/>
+    <circle cx="274" cy="257" r="8" fill="#99f6e4"/>
+
+    <!-- Right Cup -->
+    <rect x="502" y="210" width="48" height="95" rx="24" fill="#0f766e"/>
+    <rect x="538" y="225" width="22" height="65" rx="11" fill="#1e293b"/>
+    <circle cx="526" cy="257" r="8" fill="#99f6e4"/>
+
+    <!-- Sound waves subtle -->
+    <circle cx="400" cy="240" r="18" fill="none" stroke="#0d9488" stroke-width="3" stroke-dasharray="4,4" opacity="0.5"/>
+    <circle cx="400" cy="240" r="36" fill="none" stroke="#0d9488" stroke-width="2" stroke-dasharray="6,6" opacity="0.3"/>
+
+    <!-- Product Details on Card -->
+    <text x="180" y="430" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Aura Pro Noise-Cancelling Headphones</text>
+    <text x="180" y="460" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#64748b">Electronics • Studio Grade Audio</text>
+    <text x="560" y="445" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" fill="#0d9488" text-anchor="end">$249.00</text>
+  </g>
+
+  <!-- Floating Badge 1: Top Rated -->
+  <g filter="url(#badgeShadow)">
+    <rect x="90" y="220" width="165" height="60" rx="16" fill="#ffffff"/>
+    <circle cx="122" cy="250" r="18" fill="#fef3c7"/>
+    <path d="M 122 240 L 125 246 L 132 247 L 127 252 L 128 259 L 122 255 L 116 259 L 117 252 L 112 247 L 119 246 Z" fill="#d97706"/>
+    <text x="150" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Top Rated</text>
+    <text x="150" y="262" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#0d9488" font-weight="600">★ 4.9 (420+ reviews)</text>
+  </g>
+
+  <!-- Floating Badge 2: Free Shipping -->
+  <g filter="url(#badgeShadow)">
+    <rect x="540" y="320" width="180" height="60" rx="16" fill="#ffffff"/>
+    <circle cx="572" cy="350" r="18" fill="#ccfbf1"/>
+    <!-- Box icon -->
+    <rect x="562" y="342" width="20" height="16" rx="3" fill="#0d9488"/>
+    <path d="M 562 346 L 582 346" stroke="#ffffff" stroke-width="2"/>
+    <text x="600" y="344" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Free Shipping</text>
+    <text x="600" y="362" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#64748b">On orders over $75</text>
+  </g>
+</svg>
+

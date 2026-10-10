@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgF" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <linearGradient id="jacket" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" rx="16" fill="url(#bgF)"/>
+  <circle cx="300" cy="225" r="150" fill="#fed7aa" opacity="0.4"/>
+  <!-- Stylized apparel/jacket -->
+  <!-- Collar -->
+  <path d="M 250 130 L 300 170 L 350 130 L 330 110 L 300 130 L 270 110 Z" fill="#0d9488"/>
+  <!-- Body & shoulders -->
+  <path d="M 250 130 L 190 190 L 220 230 L 250 200 L 250 320 L 350 320 L 350 200 L 380 230 L 410 190 L 350 130 Z" fill="url(#jacket)"/>
+  <!-- Zipper line -->
+  <line x1="300" y1="170" x2="300" y2="320" stroke="#f59e0b" stroke-width="4" stroke-dasharray="6,4"/>
+  <!-- Pocket lines -->
+  <line x1="265" y1="260" x2="285" y2="260" stroke="#475569" stroke-width="3"/>
+  <line x1="315" y1="260" x2="335" y2="260" stroke="#475569" stroke-width="3"/>
+  <text x="300" y="370" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#475569" text-anchor="middle">Fashion & Apparel</text>
+</svg>
+

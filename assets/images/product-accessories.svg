@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf4ff"/>
+      <stop offset="100%" stop-color="#fae8ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" rx="16" fill="url(#bgA)"/>
+  <circle cx="300" cy="225" r="150" fill="#f5d0fe" opacity="0.4"/>
+  <!-- Minimalist Watch -->
+  <!-- Strap Top -->
+  <rect x="278" y="90" width="44" height="80" rx="6" fill="#78350f"/>
+  <!-- Strap Bottom -->
+  <rect x="278" y="270" width="44" height="90" rx="6" fill="#78350f"/>
+  <circle cx="300" cy="330" r="3" fill="#ffffff"/>
+  <circle cx="300" cy="315" r="3" fill="#ffffff"/>
+  <!-- Bezel -->
+  <circle cx="300" cy="225" r="68" fill="#1e293b"/>
+  <circle cx="300" cy="225" r="60" fill="#ffffff"/>
+  <circle cx="300" cy="225" r="54" fill="#0f172a"/>
+  <!-- Dial markers -->
+  <circle cx="300" cy="180" r="3" fill="#0d9488"/>
+  <circle cx="345" cy="225" r="3" fill="#0d9488"/>
+  <circle cx="300" cy="270" r="3" fill="#0d9488"/>
+  <circle cx="255" cy="225" r="3" fill="#0d9488"/>
+  <!-- Hands -->
+  <line x1="300" y1="225" x2="300" y2="195" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <line x1="300" y1="225" x2="325" y2="235" stroke="#0d9488" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="300" cy="225" r="4" fill="#f59e0b"/>
+  <!-- Crown -->
+  <rect x="366" y="220" width="6" height="10" rx="2" fill="#1e293b"/>
+  <text x="300" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#475569" text-anchor="middle">Accessories & Watches</text>
+</svg>
+

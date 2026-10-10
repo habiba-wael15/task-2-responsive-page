@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nova Store – Premium, responsive e-commerce landing page crafted for modern living essentials. Built with HTML5, CSS3, Bootstrap 5, and Vanilla JavaScript for Saiket Systems Internship.">
+  <title>Nova Store — Curated Everyday Essentials</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon (Inline SVG Data URI) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%230d9488'/><path d='M30 65 L30 35 L50 55 L70 35 L70 65' stroke='white' stroke-width='10' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
+</head>
+<body>
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar text-center py-2">
+    <div class="container d-flex justify-content-center align-items-center gap-2 flex-wrap">
+      <span>✨ <strong>Spring Launch:</strong> Enjoy complimentary shipping on orders over $75.</span>
+      <span class="d-none d-md-inline">•</span>
+      <span class="d-none d-md-inline">Use promo code <span class="badge bg-teal-subtle text-white px-2 py-1" style="background-color: #0d9488;">NOVA10</span> for 10% off.</span>
+    </div>
+  </div>
+
+  <!-- Header & Navigation Bar -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-custom" aria-label="Main Navigation">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="#home">
+          <div class="brand-symbol" aria-hidden="true">
+            <i class="bi bi-box-seam-fill"></i>
+          </div>
+          <span>Nova Store<span class="brand-dot">.</span></span>
+        </a>
+
+        <!-- Mobile Action Buttons (Cart + Toggler) -->
+        <div class="d-flex align-items-center gap-2 order-lg-3">
+          <!-- Cart Drawer Button -->
+          <button 
+            type="button" 
+            class="btn-cart-trigger" 
+            data-bs-toggle="offcanvas" 
+            data-bs-target="#cartOffcanvas" 
+            aria-controls="cartOffcanvas"
+            aria-label="Open shopping cart"
+          >
+            <i class="bi bi-bag"></i>
+            <span class="cart-label d-none d-sm-inline">Bag</span>
+            <span class="cart-counter" id="cart-badge" aria-label="Shopping bag with 0 items">0</span>
+          </button>
+
+          <!-- Mobile Hamburger Toggler -->
+          <button 
+            class="navbar-toggler border-0 shadow-none p-2" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list fs-2 text-dark"></i>
+          </button>
+        </div>
+
+        <!-- Collapsible Navigation Links -->
+        <div class="collapse navbar-collapse order-lg-2 justify-content-center" id="navbarNav">
+          <ul class="navbar-nav gap-lg-2 my-3 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#categories">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#products">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content">
+
+    <!-- ========================================================================
+         HERO SECTION
+         ======================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <!-- Left Hero Content -->
+          <div class="col-lg-6">
+            <div class="hero-pill-badge">
+              <i class="bi bi-stars text-teal"></i>
+              <span>Spring Collection 2026</span>
+            </div>
+
+            <h1 class="hero-title">
+              Elevate Your Everyday With <span class="text-highlight">Thoughtful</span> Essentials.
+            </h1>
+
+            <p class="hero-subtitle">
+              Discover minimalist electronics, contemporary fashion, and refined accessories crafted for modern living. Clean aesthetics, durable craft, and everyday ease.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#products" class="btn btn-primary-teal">
+                <span>Shop Collection</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="#categories" class="btn btn-outline-custom">
+                <i class="bi bi-grid"></i>
+                <span>Explore Categories</span>
+              </a>
+            </div>
+
+            <!-- Trust Highlights -->
+            <div class="hero-trust-list">
+              <div class="trust-item">
+                <i class="bi bi-star-fill text-warning"></i>
+                <span>4.9/5 Rating (1,200+ Reviews)</span>
+              </div>
+              <div class="trust-item">
+                <i class="bi bi-truck text-teal"></i>
+                <span>Free Shipping Over $75</span>
+              </div>
+              <div class="trust-item">
+                <i class="bi bi-shield-check text-teal"></i>
+                <span>30-Day Easy Returns</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Hero Visual -->
+          <div class="col-lg-6">
+            <div class="hero-image-wrapper">
+              <!-- Floating Badge: Top-Left -->
+              <div class="hero-floating-badge badge-top-left shadow-sm">
+                <div class="badge-icon amber">
+                  <i class="bi bi-patch-check-fill"></i>
+                </div>
+                <div>
+                  <div class="fw-bold small text-dark">Top Pick 2026</div>
+                  <div class="text-muted" style="font-size: 0.78rem;">Verified Premium Quality</div>
+                </div>
+              </div>
+
+              <!-- Main Hero Showcase Graphic -->
+              <div class="hero-main-card">
+                <img 
+                  src="assets/images/hero-showcase.svg" 
+                  alt="Nova Store curated audio and lifestyle collection" 
+                  class="img-fluid w-100"
+                  width="800" 
+                  height="600"
+                >
+              </div>
+
+              <!-- Floating Badge: Bottom-Right -->
+              <div class="hero-floating-badge badge-bottom-right shadow-sm">
+                <div class="badge-icon teal">
+                  <i class="bi bi-lightning-charge-fill"></i>
+                </div>
+                <div>
+                  <div class="fw-bold small text-dark">Instant Dispatch</div>
+                  <div class="text-muted" style="font-size: 0.78rem;">Orders ship within 24h</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         CATEGORY SHOWCASE SECTION
+         ======================================================================== -->
+    <section class="section-padding" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Collections</span>
+          <h2 class="section-title">Shop by Category</h2>
+          <p class="section-subtitle">
+            Curated essentials categorized to help you quickly discover what complements your everyday routine.
+          </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- All Categories Card -->
+          <div class="col-6 col-md-4 col-lg-2dot4 col-xl">
+            <div class="category-card active-category" data-category="all" role="button" tabindex="0" aria-label="View all categories">
+              <div class="category-icon-box">
+                <i class="bi bi-collection-fill"></i>
+              </div>
+              <h3 class="category-title">All Items</h3>
+              <span class="category-count">12 Products</span>
+            </div>
+          </div>
+
+          <!-- Electronics -->
+          <div class="col-6 col-md-4 col-lg-2dot4 col-xl">
+            <div class="category-card" data-category="electronics" role="button" tabindex="0" aria-label="View Electronics category">
+              <div class="category-icon-box">
+                <i class="bi bi-headphones"></i>
+              </div>
+              <h3 class="category-title">Electronics</h3>
+              <span class="category-count">3 Products</span>
+            </div>
+          </div>
+
+          <!-- Fashion -->
+          <div class="col-6 col-md-4 col-lg-2dot4 col-xl">
+            <div class="category-card" data-category="fashion" role="button" tabindex="0" aria-label="View Fashion category">
+              <div class="category-icon-box">
+                <i class="bi bi-bag-heart-fill"></i>
+              </div>
+              <h3 class="category-title">Fashion</h3>
+              <span class="category-count">3 Products</span>
+            </div>
+          </div>
+
+          <!-- Accessories -->
+          <div class="col-6 col-md-4 col-lg-2dot4 col-xl">
+            <div class="category-card" data-category="accessories" role="button" tabindex="0" aria-label="View Accessories category">
+              <div class="category-icon-box">
+                <i class="bi bi-watch"></i>
+              </div>
+              <h3 class="category-title">Accessories</h3>
+              <span class="category-count">3 Products</span>
+            </div>
+          </div>
+
+          <!-- Home & Living -->
+          <div class="col-6 col-md-4 col-lg-2dot4 col-xl">
+            <div class="category-card" data-category="home" role="button" tabindex="0" aria-label="View Home and Living category">
+              <div class="category-icon-box">
+                <i class="bi bi-lamp-fill"></i>
+              </div>
+              <h3 class="category-title">Home &amp; Living</h3>
+              <span class="category-count">3 Products</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PRODUCTS SECTION (CATALOG, FILTERS, SEARCH & EMPTY STATE)
+         ======================================================================== -->
+    <section class="section-padding bg-warm" id="products">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Catalog</span>
+          <h2 class="section-title">Explore Our Products</h2>
+          <p class="section-subtitle">
+            Browse through our premium selection. Filter by category, search by product name, or sort to find your favorites.
+          </p>
+        </div>
+
+        <!-- Filter & Search Interactive Toolbar -->
+        <div class="product-toolbar">
+          <div class="row g-3 align-items-center">
+            <!-- Search Input -->
+            <div class="col-12 col-md-5 col-lg-4">
+              <div class="search-input-group">
+                <i class="bi bi-search search-icon" aria-hidden="true"></i>
+                <input 
+                  type="text" 
+                  class="form-control search-input" 
+                  id="product-search-input" 
+                  placeholder="Search products by title..." 
+                  aria-label="Search products"
+                >
+                <button type="button" class="search-clear-btn" id="search-clear-btn" aria-label="Clear search input">
+                  <i class="bi bi-x-circle-fill"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Category Pills -->
+            <div class="col-12 col-lg-5 order-3 order-lg-2">
+              <div class="category-pills" id="category-pills" role="toolbar" aria-label="Filter products by category">
+                <button type="button" class="category-pill-btn active" data-category="all">All</button>
+                <button type="button" class="category-pill-btn" data-category="electronics">Electronics</button>
+                <button type="button" class="category-pill-btn" data-category="fashion">Fashion</button>
+                <button type="button" class="category-pill-btn" data-category="accessories">Accessories</button>
+                <button type="button" class="category-pill-btn" data-category="home">Home &amp; Living</button>
+              </div>
+            </div>
+
+            <!-- Sort By Selector -->
+            <div class="col-12 col-md-4 col-lg-3 order-2 order-lg-3 ms-auto">
+              <div class="d-flex align-items-center justify-content-md-end gap-2">
+                <label for="product-sort-select" class="visually-hidden">Sort Products</label>
+                <select class="form-select sort-select w-auto flex-grow-1 flex-md-grow-0" id="product-sort-select">
+                  <option value="featured" selected>Sort by: Featured</option>
+                  <option value="price-asc">Price: Low to High</option>
+                  <option value="price-desc">Price: High to Low</option>
+                  <option value="rating">Highest Rated</option>
+                  <option value="name">Name: A to Z</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Metadata counter -->
+          <div class="d-flex justify-content-between align-items-center pt-3 mt-3 border-top">
+            <span class="results-meta" id="results-count">Showing 12 of 12 products</span>
+            <span class="small text-muted d-none d-sm-inline">
+              <i class="bi bi-info-circle me-1"></i> Click any product card for details
+            </span>
+          </div>
+        </div>
+
+        <!-- Product Cards Grid (Rendered via JavaScript) -->
+        <div class="row g-4" id="product-grid" aria-live="polite">
+          <!-- Populated dynamically via js/main.js -->
+        </div>
+
+        <!-- Empty State Container (Displayed when no products match) -->
+        <div class="empty-state d-none" id="empty-state" role="status">
+          <div class="empty-state-icon">
+            <i class="bi bi-search"></i>
+          </div>
+          <h3 class="empty-state-title">No matching products found</h3>
+          <p class="empty-state-text">
+            We couldn't find any items matching your active search query or filter selection. Try adjusting your keywords or reset all filters.
+          </p>
+          <button type="button" class="btn btn-primary-teal" id="reset-filters-btn">
+            <i class="bi bi-arrow-counterclockwise"></i>
+            <span>Reset All Filters</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         ABOUT & BENEFITS SECTION
+         ======================================================================== -->
+    <section class="section-padding benefits-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Why Choose Us</span>
+          <h2 class="section-title">The Nova Store Experience</h2>
+          <p class="section-subtitle">
+            We believe mindful design and quality materials turn daily objects into enjoyable rituals.
+          </p>
+        </div>
+
+        <div class="row g-4 mb-4">
+          <!-- Story Block -->
+          <div class="col-lg-5">
+            <div class="story-card d-flex flex-column justify-content-between">
+              <div>
+                <span class="badge bg-teal-100 text-teal-800 fw-bold px-3 py-2 rounded-pill mb-3" style="background-color: #ccfbf1; color: #115e59;">
+                  Our Philosophy
+                </span>
+                <h3 class="h3 fw-bold mb-3">Designed with Purpose, Built to Last.</h3>
+                <p class="text-secondary leading-relaxed mb-3">
+                  Founded with an obsessive dedication to craftsmanship, Nova Store curates timeless everyday items. From ergonomic desk accessories to relaxed natural textiles, each piece is selected for lasting utility and uncompromised aesthetic value.
+                </p>
+                <p class="text-secondary leading-relaxed">
+                  Every product undergoes stringent design reviews to ensure honest materials, mindful packaging, and dependable real-world performance.
+                </p>
+              </div>
+
+              <div class="pt-3 border-top mt-4">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="brand-symbol" style="width: 34px; height: 34px; font-size: 0.95rem;">
+                    <i class="bi bi-check2"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold small text-dark">Saiket Systems Internship Showcase</div>
+                    <div class="text-muted small">Task 2 – Responsive Web Design</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 Core Benefits Grid -->
+          <div class="col-lg-7">
+            <div class="row g-3 h-100">
+              <!-- Benefit 1 -->
+              <div class="col-sm-6">
+                <div class="benefit-card">
+                  <div class="benefit-icon-wrapper">
+                    <i class="bi bi-award-fill"></i>
+                  </div>
+                  <h4 class="benefit-title">Curated Quality</h4>
+                  <p class="benefit-desc">
+                    Every item is evaluated for durability and design elegance, eliminating clutter from your shopping journey.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Benefit 2 -->
+              <div class="col-sm-6">
+                <div class="benefit-card">
+                  <div class="benefit-icon-wrapper">
+                    <i class="bi bi-shield-lock-fill"></i>
+                  </div>
+                  <h4 class="benefit-title">Simulated Security</h4>
+                  <p class="benefit-desc">
+                    Designed with transparent frontend shopping simulations to demonstrate modern e-commerce user interaction patterns.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Benefit 3 -->
+              <div class="col-sm-6">
+                <div class="benefit-card">
+                  <div class="benefit-icon-wrapper">
+                    <i class="bi bi-headset"></i>
+                  </div>
+                  <h4 class="benefit-title">Attentive Care</h4>
+                  <p class="benefit-desc">
+                    Dedicated support touchpoints, clear product specifications, and friendly guidance for every customer inquiry.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Benefit 4 -->
+              <div class="col-sm-6">
+                <div class="benefit-card">
+                  <div class="benefit-icon-wrapper">
+                    <i class="bi bi-recycle"></i>
+                  </div>
+                  <h4 class="benefit-title">Conscious Mindset</h4>
+                  <p class="benefit-desc">
+                    Focus on low-impact packaging materials and sustainable fabrication partners across our sample catalog.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Transparency Alert -->
+        <div class="demo-alert-banner">
+          <i class="bi bi-info-circle-fill fs-4 flex-shrink-0"></i>
+          <div>
+            <strong>Portfolio Demonstration Notice:</strong> Nova Store is a frontend conceptual application designed exclusively for the Saiket Systems Full Stack Development Internship. No live financial payments, inventory management servers, or real shipping networks are operated.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         CONTACT SECTION
+         ======================================================================== -->
+    <section class="section-padding bg-white" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">We’d Love to Hear From You</h2>
+          <p class="section-subtitle">
+            Have questions about a sample product, feedback on this project, or just want to say hello? Send us a message below.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Contact Info Column -->
+          <div class="col-lg-4">
+            <div class="contact-card h-100 d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="h4 fw-bold mb-3">Contact Information</h3>
+                <p class="text-secondary small mb-4">
+                  Feel free to test client-side validation using the form. Our validation script validates input formatting instantly.
+                </p>
+
+                <div class="contact-info-list">
+                  <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                      <i class="bi bi-envelope-fill"></i>
+                    </div>
+                    <div>
+                      <div class="fw-bold small text-dark">Email Support</div>
+                      <a href="mailto:support@novastore.example" class="small text-secondary">support@novastore.example</a>
+                    </div>
+                  </div>
+
+                  <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                      <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <div>
+                      <div class="fw-bold small text-dark">Design Studio</div>
+                      <span class="small text-secondary">San Francisco, CA &amp; Remote Global</span>
+                    </div>
+                  </div>
+
+                  <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                      <i class="bi bi-clock-fill"></i>
+                    </div>
+                    <div>
+                      <div class="fw-bold small text-dark">Service Hours</div>
+                      <span class="small text-secondary">Mon – Fri: 9:00 AM – 6:00 PM EST</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-3 bg-light rounded mt-4 border">
+                <div class="small fw-bold text-dark mb-1">
+                  <i class="bi bi-code-slash text-teal me-1"></i> Technical Note
+                </div>
+                <div class="small text-muted">
+                  Client-side JavaScript performs complete field checks for valid email structure, minimum length, and topic selection.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Column -->
+          <div class="col-lg-8">
+            <div class="contact-card">
+              <form id="contact-form" class="contact-form" novalidate>
+                <div class="row g-3">
+                  <!-- Full Name Input -->
+                  <div class="col-md-6 form-group">
+                    <label for="contact-name" class="form-label">Full Name <span class="text-danger">*</span></label>
+                    <input 
+                      type="text" 
+                      class="form-control" 
+                      id="contact-name" 
+                      placeholder="e.g. Alex Morgan" 
+                      required
+                    >
+                    <div class="invalid-feedback">Please enter your full name (minimum 2 characters).</div>
+                  </div>
+
+                  <!-- Email Input -->
+                  <div class="col-md-6 form-group">
+                    <label for="contact-email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                    <input 
+                      type="email" 
+                      class="form-control" 
+                      id="contact-email" 
+                      placeholder="name@example.com" 
+                      required
+                    >
+                    <div class="invalid-feedback">Please provide a valid email address.</div>
+                  </div>
+
+                  <!-- Subject Select -->
+                  <div class="col-12 form-group">
+                    <label for="contact-subject" class="form-label">Inquiry Topic <span class="text-danger">*</span></label>
+                    <select class="form-select" id="contact-subject" required>
+                      <option value="" selected disabled>Select an inquiry topic...</option>
+                      <option value="product">Sample Product Inquiry</option>
+                      <option value="shipping">Order &amp; Shipping Questions</option>
+                      <option value="feedback">Internship Feedback &amp; Suggestions</option>
+                      <option value="general">General Inquiries</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose a topic for your inquiry.</div>
+                  </div>
+
+                  <!-- Message Textarea -->
+                  <div class="col-12 form-group">
+                    <label for="contact-message" class="form-label">Message <span class="text-danger">*</span></label>
+                    <textarea 
+                      class="form-control" 
+                      id="contact-message" 
+                      rows="4" 
+                      placeholder="Write your message here (at least 10 characters)..." 
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">Please enter a message with at least 10 characters.</div>
+                  </div>
+
+                  <!-- Consent Checkbox -->
+                  <div class="col-12 form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="contact-consent" required>
+                      <label class="form-check-label small text-secondary" for="contact-consent">
+                        I understand this contact form performs simulated frontend validation for demonstration purposes. <span class="text-danger">*</span>
+                      </label>
+                      <div class="invalid-feedback">You must acknowledge the simulation notice to submit.</div>
+                    </div>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-primary-teal w-100 py-3" id="contact-submit-btn">
+                      <i class="bi bi-send-fill me-2"></i>
+                      <span>Send Message</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Live Feedback Box -->
+                <div class="form-feedback-message" id="contact-feedback" role="alert"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Brand & Bio -->
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-brand text-decoration-none" href="#home">
+            <div class="brand-symbol" style="width: 36px; height: 36px; font-size: 1rem;">
+              <i class="bi bi-box-seam-fill"></i>
+            </div>
+            <span>Nova Store<span class="text-teal">.</span></span>
+          </a>
+          <p class="footer-desc">
+            Thoughtfully engineered lifestyle products. Created with clean responsive design, Bootstrap 5, and vanilla JavaScript.
+          </p>
+          <div class="d-flex gap-2">
+            <span class="badge bg-dark border border-secondary text-light px-3 py-2 rounded-pill">HTML5</span>
+            <span class="badge bg-dark border border-secondary text-light px-3 py-2 rounded-pill">CSS3</span>
+            <span class="badge bg-dark border border-secondary text-light px-3 py-2 rounded-pill">Bootstrap 5</span>
+            <span class="badge bg-dark border border-secondary text-light px-3 py-2 rounded-pill">Vanilla JS</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#products">Product Catalog</a></li>
+            <li><a href="#about">About Nova</a></li>
+            <li><a href="#contact">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Categories Links -->
+        <div class="col-lg-2 col-6">
+          <h4 class="footer-heading">Collections</h4>
+          <ul class="footer-links">
+            <li><a href="#products">Electronics</a></li>
+            <li><a href="#products">Fashion &amp; Apparel</a></li>
+            <li><a href="#products">Accessories</a></li>
+            <li><a href="#products">Home &amp; Living</a></li>
+            <li><a href="#products">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Subscription Column -->
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-heading">Stay Connected</h4>
+          <p class="text-muted small mb-3">
+            Subscribe for conceptual product announcements and exclusive test promo codes.
+          </p>
+          <form id="newsletter-form" class="d-flex flex-column gap-2" novalidate>
+            <div class="input-group">
+              <input 
+                type="email" 
+                class="form-control footer-newsletter-input" 
+                id="newsletter-email" 
+                placeholder="Enter your email address" 
+                aria-label="Your email address" 
+                required
+              >
+              <button class="btn btn-primary-teal" type="submit" aria-label="Subscribe to newsletter">
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+            <span class="small text-muted">Test coupon available: <code>NOVA10</code> (10% off)</span>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="mb-0 text-center text-md-start">
+          &copy; 2026 Nova Store. All rights reserved. Developed for Saiket Systems Full Stack Internship.
+        </p>
+        <p class="mb-0 text-center text-md-end text-muted small">
+          Educational Portfolio Project • Pure Frontend Prototype
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       SHOPPING CART OFFCANVAS DRAWER
+       ======================================================================== -->
+  <div 
+    class="offcanvas offcanvas-end cart-offcanvas" 
+    tabindex="-1" 
+    id="cartOffcanvas" 
+    aria-labelledby="cartOffcanvasLabel"
+  >
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title" id="cartOffcanvasLabel">
+        <i class="bi bi-bag-check-fill text-teal"></i>
+        <span>Shopping Bag</span>
+      </h2>
+      <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close cart"></button>
+    </div>
+
+    <div class="offcanvas-body p-0 d-flex flex-column">
+      <!-- Empty Cart View -->
+      <div class="p-5 text-center my-auto d-none" id="cart-empty-view">
+        <div class="empty-state-icon mx-auto mb-3" style="width: 68px; height: 68px; font-size: 1.8rem;">
+          <i class="bi bi-cart-x"></i>
+        </div>
+        <h3 class="h5 fw-bold mb-2">Your shopping bag is empty</h3>
+        <p class="text-secondary small mb-4">
+          Discover our curated collections and add your favorite items to get started.
+        </p>
+        <button type="button" class="btn btn-primary-teal btn-sm px-4" data-bs-dismiss="offcanvas">
+          <span>Explore Products</span>
+        </button>
+      </div>
+
+      <!-- Populated Cart View -->
+      <div class="d-flex flex-column flex-grow-1" id="cart-populated-view">
+        <!-- Scrollable list of items -->
+        <div class="cart-items-list flex-grow-1" id="cart-items-list">
+          <!-- Populated dynamically via js/main.js -->
+        </div>
+
+        <!-- Cart Summary & Actions Box -->
+        <div class="cart-summary-box">
+          <!-- Subtotal -->
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span class="fw-bold text-dark" id="cart-subtotal">$0.00</span>
+          </div>
+
+          <!-- Promo Discount (Conditional) -->
+          <div class="summary-row text-success d-none" id="cart-discount-row">
+            <span>Promo Discount</span>
+            <span class="fw-bold" id="cart-discount-text">-$0.00</span>
+          </div>
+
+          <!-- Shipping -->
+          <div class="summary-row">
+            <span>Estimated Shipping</span>
+            <span id="cart-shipping">FREE</span>
+          </div>
+
+          <!-- Promo Input Form -->
+          <div class="promo-form">
+            <input 
+              type="text" 
+              class="form-control promo-input" 
+              id="promo-input" 
+              placeholder="Promo code (e.g. NOVA10)" 
+              aria-label="Promo code input"
+            >
+            <button type="button" class="btn btn-outline-dark btn-apply-promo" id="btn-apply-promo">
+              Apply
+            </button>
+          </div>
+          <div id="promo-feedback"></div>
+
+          <!-- Total -->
+          <div class="summary-row total-row">
+            <span>Estimated Total</span>
+            <span class="text-teal" id="cart-total">$0.00</span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="d-grid gap-2 mt-3">
+            <button type="button" class="btn btn-primary-teal py-2" id="cart-checkout-btn">
+              <i class="bi bi-lock-fill me-1"></i> Proceed to Checkout
+            </button>
+            <button type="button" class="btn btn-outline-danger btn-sm" id="clear-cart-btn">
+              <i class="bi bi-trash3 me-1"></i> Clear Shopping Bag
+            </button>
+          </div>
+
+          <div class="demo-disclaimer">
+            <i class="bi bi-shield-check me-1"></i> Simulated Demo Checkout • No financial data required
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       PRODUCT DETAIL QUICK VIEW MODAL
+       ======================================================================== -->
+  <div 
+    class="modal fade" 
+    id="quickViewModal" 
+    tabindex="-1" 
+    aria-labelledby="quickViewModalLabel" 
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close modal"></button>
+        </div>
+        <div class="modal-body p-4 p-md-5 pt-0">
+          <div class="row g-4 align-items-center">
+            <!-- Modal Image -->
+            <div class="col-md-6">
+              <div class="rounded-3 overflow-hidden bg-light border">
+                <img 
+                  src="" 
+                  alt="Product Image" 
+                  id="modal-product-img" 
+                  class="img-fluid w-100" 
+                  style="aspect-ratio: 4/3; object-fit: cover;"
+                >
+              </div>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="col-md-6">
+              <span class="badge bg-teal-100 text-teal-800 rounded-pill px-3 py-1 mb-2" id="modal-product-category" style="background-color: #ccfbf1; color: #0f766e;">
+                Category
+              </span>
+              <h2 class="h4 fw-bold mb-2" id="modal-product-title">Product Title</h2>
+              
+              <div class="d-flex align-items-center mb-3" id="modal-product-rating">
+                <!-- Stars rendered here -->
+              </div>
+
+              <div class="h3 fw-bold text-teal mb-3" id="modal-product-price">
+                $0.00
+              </div>
+
+              <p class="text-secondary small mb-4" id="modal-product-desc">
+                Product full description goes here.
+              </p>
+
+              <!-- Quantity Selector & Add Button -->
+              <div class="d-flex align-items-center gap-3">
+                <div class="d-inline-flex align-items-center border rounded-pill bg-light p-1">
+                  <button type="button" class="btn btn-sm btn-link text-dark text-decoration-none px-2" id="modal-qty-minus" aria-label="Decrease quantity">
+                    <i class="bi bi-dash"></i>
+                  </button>
+                  <input 
+                    type="number" 
+                    id="modal-product-qty" 
+                    class="form-control form-control-sm text-center border-0 bg-transparent fw-bold" 
+                    value="1" 
+                    min="1" 
+                    max="99" 
+                    style="width: 44px;" 
+                    aria-label="Product quantity"
+                  >
+                  <button type="button" class="btn btn-sm btn-link text-dark text-decoration-none px-2" id="modal-qty-plus" aria-label="Increase quantity">
+                    <i class="bi bi-plus"></i>
+                  </button>
+                </div>
+
+                <button type="button" class="btn btn-primary-teal flex-grow-1" id="modal-add-cart-btn">
+                  <i class="bi bi-bag-plus me-1"></i> Add to Bag
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       DEMO CHECKOUT MODAL
+       ======================================================================== -->
+  <div 
+    class="modal fade" 
+    id="demoCheckoutModal" 
+    tabindex="-1" 
+    aria-labelledby="demoCheckoutModalLabel" 
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-4 text-center p-4">
+        <div class="modal-body">
+          <div class="empty-state-icon mx-auto mb-3" style="width: 70px; height: 70px; background-color: #ccfbf1; color: #0d9488;">
+            <i class="bi bi-check2-circle fs-1"></i>
+          </div>
+          <h3 class="h4 fw-bold mb-2">Simulated Order Completed!</h3>
+          <p class="text-secondary small mb-3">
+            Thank you for interacting with the <strong>Nova Store</strong> demonstration!
+          </p>
+
+          <div class="bg-light p-3 rounded-3 text-start small mb-3 border">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Items Ordered:</span>
+              <strong id="checkout-modal-items">0</strong>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span>Order Total:</span>
+              <strong class="text-teal" id="checkout-modal-total">$0.00</strong>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span>Order Reference:</span>
+              <span class="text-muted">#NOVA-DEMO-2026</span>
+            </div>
+          </div>
+
+          <div class="alert alert-info py-2 small text-start">
+            <i class="bi bi-info-circle-fill me-1"></i>
+            This is a frontend portfolio project for the <strong>Saiket Systems Full Stack Internship</strong>. No actual payment was charged and no shipment was scheduled.
+          </div>
+
+          <button type="button" class="btn btn-primary-teal w-100 mt-2" id="demo-confirm-finish">
+            <span>Done &amp; Reset Demo</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FLOATING BACK TO TOP BUTTON
+       ======================================================================== -->
+  <button 
+    type="button" 
+    class="btn-back-to-top" 
+    id="btn-back-to-top" 
+    aria-label="Back to top of page"
+  >
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- ========================================================================
+       TOAST NOTIFICATION CONTAINER
+       ======================================================================== -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toast-container">
+    <!-- Dynamic Toasts injected via js/main.js -->
+  </div>
+
+  <!-- Bootstrap 5.3.3 JS Bundle (Popper included) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Application Main JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+
